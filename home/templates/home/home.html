@@ -1,0 +1,22 @@
+{% extends "home/main.html" %}
+{% load static %}
+{% block content %}
+
+<link rel="stylesheet" href="{% static "/css/home.css" %}">
+
+<div class="slider-container">
+    <div class="slider">
+        <div class="slide"><img src="{% static '/images/civic.jpg' %}" alt=""> </div>
+        <div class="slide"><img src="{% static '/images/fortunerlegender.png' %}" alt=""> </div>
+        <div class="slide"><img src="{% static '/images/landcruiser.jpg' %}" alt=""> </div>
+    </div>
+    <div class="overlay-text">Rent Your Favourite Cars. With or Without Driver <br> 
+        In or Out of City. Special Discount on Weddings
+    </div>
+</div>
+
+
+
+
+<script src="{% static "/js/home.js" %}"></script>
+{% endblock content %}
