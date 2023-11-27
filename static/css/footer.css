@@ -45,6 +45,11 @@
     
 }
 
+#contactUs .footer-cont .footer-lines .footer-line-main a{
+    text-decoration: none;
+    color: #dfdcdc;
+}
+
 #contactUs .footer-cont .footer-lines  .footer-line-main:hover{
     transform: translateX(10px);
     cursor: pointer;
