@@ -1,0 +1,133 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif,Arial, Helvetica, sans-serif;
+}
+
+.footer-container{
+    display: flex;
+    justify-content: space-evenly;
+    /* align-items: center; */
+    height: auto;
+    padding:20px 0 20px 60px;
+    background: linear-gradient(to top, rgb(0, 0, 0),rgb(20, 20, 20));
+    color: #fff;
+
+}
+
+.footer-ind_cont{
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.footer-title{
+    color: rgb(226, 168, 22);
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+#contactUs{
+    width: 380px;
+}
+
+#contactUs .footer-title{
+    color: #fff;
+}
+
+#contactUs .footer-cont{
+    color: #dfdcdc;
+}
+
+#contactUs .footer-cont .footer-lines .footer-line .footer-icon{
+    margin-right: 10px;
+    
+}
+
+#contactUs .footer-cont .footer-lines  .footer-line-main:hover{
+    transform: translateX(10px);
+    cursor: pointer;
+}
+
+.footer-cont .footer-about-p{
+    font-size:13px;
+    color: #f7f7f7;
+}
+
+.footer-lines{
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-line{
+    display: flex;
+    justify-content: flex-start;
+
+}
+
+.footer-lines .footer-line-main{
+    list-style: none;
+    margin-bottom: 25px;
+    transition: 0.5s;
+}
+
+#social{
+    display: flex;
+    list-style: none;
+}
+
+#social li a{
+    text-decoration: none;
+    color: #fff;
+    margin-right: 35px;
+    font-size: 20px;
+    padding: 7px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#social li a i{
+    width: 18px;
+}
+
+#social li a:hover{
+    background-color: white;
+    color: black;
+}
+
+#explore .footer-title{
+    color: #fff;
+}
+
+#explore .footer-cont ul{
+    list-style: none;
+}
+#explore .footer-cont ul .footer-link{
+    margin-bottom: 15px;
+    transition: 0.5s;
+}
+
+    
+#explore .footer-cont ul .footer-link:hover{
+    transform: translateX(10px);
+}
+
+#explore .footer-cont ul .footer-link a{
+    text-decoration: none;
+    color: #dfdcdc;
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-ind_cont {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
