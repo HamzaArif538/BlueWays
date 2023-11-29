@@ -1,22 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&family=Open+Sans:ital,wght@1,300&display=swap');
+
 *{
     margin: 0;
     padding: 0;
 }
 
-.vehiclepage-maincont{
-    background: linear-gradient(to bottom,rgb(255, 255, 255), rgb(228, 227, 227));    padding-left: 30px;
-    font-family:Georgia, 'Times New Roman', Times, serif
+.vehiclepage-bigcont{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(to bottom,rgb(255, 255, 255), rgb(228, 227, 227));
 }
 
-.vehiclepage-heading{
-    margin: 20px 20px;
-    padding-top: 20px;
+.vehiclepage-maincont{
+    background: linear-gradient(to bottom,rgb(255, 255, 255), rgb(228, 227, 227));
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    width: 100%;
+}
+
+.vehiclepage-maincont .vehiclepage-heading{
+    margin: 0px 20px 0 20px;
+    padding: 20px 40px;
+    position: relative;
+    top: 50px;
+}
+
+.vehiclepage-maincont .vehiclepage-extra{
+    margin-left: 20px;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 30px;
+    font-family: 'Calibri';
+    padding: 10px 40px;
+}
+
+
+.vehiclepage-maincont .vehiclepage-extra .vehiclepage-result{
+    font-size: 17px;
+    position: relative;
+    top: 50px;
+}
+.vehiclepage-maincont .vehiclepage-extra .vehiclepage-result p{
+    /* font-family: 'Open Sans', sans-serif; */
+    font-family: 'Inconsolata', monospace;
+    
+}
+
+.vehiclepage-extra .vehiclepage-topright .current{
+    /* background-color: blue; */
+    /* font-family: 'Open Sans', sans-serif; */
+    font-family: 'Inconsolata', monospace;
+}
+
+.vehiclepage-sort #vehicle-sort-dropdown{
+    background-color: rgb(228, 227, 227);
+    padding: 5px 5px;
+    border: 1px solid rgb(199, 198, 198);
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.vehiclepage-sort #vehicle-sort-dropdown option{
+    cursor: pointer;
 }
 
 .vehiclepage-container{
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
+    padding:10px 40px;
     
 }
 
@@ -88,4 +142,35 @@
     font-size: 15px;
     margin-top: 6px;
     margin-left: 3px;
+}
+
+
+.vehiclepage-bigcont .pagination .step-links .vehiclepagination{
+    text-decoration: none;
+    color: black;
+    background:#fff;
+    font-size: 20px;
+    padding: 7px 11px;
+    height: 20px;
+    margin: 10px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.vehiclepage-bigcont  .pagination .step-links .vehiclepagination:hover{
+    background: rgb(76, 174, 212) ;
+    color: #fff;
+}
+
+.vehiclepage-bigcont .pagination .step-links .vehiclepagination.page-current {
+    background: rgb(76, 174, 212) ;
+    color: #fff;
+}
+
+
+
+.vehiclepage-bigcont .pagination{
+    background:rgb(228, 227, 227) ;
+    
 }
