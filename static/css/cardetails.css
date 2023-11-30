@@ -1,0 +1,149 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.cardetailcontainer{
+    background: linear-gradient(to bottom,rgb(255, 255, 255), rgb(228, 227, 227));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.cardetailcontainer .cardetailcont{
+    border: 2px solid rgb(185, 185, 185) ;
+    width: 80vw;
+    margin: 100px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #fff;
+    padding-bottom: 50px;
+}
+
+.cardetailcont .cardetailtitle{
+    width: 100%;
+    background-color: rgb(36, 114, 216);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    padding: 12px 0;
+    margin-bottom: 20px;
+}
+
+.cardetailcont .cardetailinfo{
+    display: flex;
+    justify-content: space-between;
+    /* background-color: black; */
+    width: 70vw;
+    margin-top: 15px;
+}
+
+.cardetailinfo .carinfoleft{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.carinfoleft .infolefttittle{
+    background-color: rgb(36, 114, 216);
+    color: #fff;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 12px 0;
+    margin-bottom: 15px;
+}
+
+.carinfoleft .infoleftpic{
+    width: 500px;
+    overflow: hidden;
+}
+
+.cardetailcont .cardetailinfo .carinfoleft .infoleftpic img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.4s;
+}
+
+.cardetailcont .cardetailinfo .carinfoleft .infoleftpic img:hover{
+    transform: scale(1.1);
+}
+
+.carinfoleft .infoleftprice{
+    background-color: rgb(36, 114, 216);
+    color: #fff;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 12px 0;
+    margin: 15px 0 20px 0;
+}
+
+.carinforight{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 420px;
+    /* background-color: goldenrod; */
+}
+
+.carinforight .inforighttitle{
+    background-color: rgb(36, 114, 216);
+    color: #fff;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 12px 0;
+}
+
+.carinforight .inforighttable{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.inforighttable table{
+    border: 1px solid rgb(209, 208, 208);
+    border-collapse: collapse;
+    color: rgb(128, 128, 128);
+    font-size: 14px;
+}
+
+.inforighttable table tr td{
+    padding: 10px 0;
+    text-align: center;
+}
+
+.inforighttable table tr:nth-child(odd){
+    background-color: rgb(241, 241, 241);
+}
+
+.inforighttable table tr td:nth-child(even){
+    font-weight: bold;
+}
+
+.carinforight .inforightbooking{
+    background-color: #fcc742;
+    color: #fff;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 12px 0;
+    margin-top: 15px;
+    border-radius: 2px;
+    transition: 0.4s;
+}
+
+.carinforight .inforightbooking:hover{
+    cursor: pointer;
+    background: #232D3F;
+}
+
+.inforightbooking a{
+    color: #fff;
+    text-decoration: none;
+}

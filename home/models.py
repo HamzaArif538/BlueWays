@@ -11,6 +11,7 @@ class Manufacturer(models.Model):
 class Car(models.Model):
     name = models.CharField(max_length=200, null=True)
     price = models.IntegerField(null=True)
+    outcityprice = models.IntegerField(null=True)
     car_model = models.CharField(max_length=4 ,null=True)
     date_created = models.DateTimeField(auto_now_add=True, null=True)
     picture = models.ImageField(upload_to='car_pictures/', null=True, blank=True)

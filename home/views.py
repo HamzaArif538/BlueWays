@@ -42,3 +42,12 @@ def vehicles(request):
 
 def categories(request):
     return render(request, 'home/categories.html')
+
+def carDetail(request, pk_test):
+    car = Car.objects.get(id=pk_test)
+    context = {'car':car}
+    return render(request, 'home/cardetails.html', context)
+
+def vehiclebooking(request):
+
+    return render(request, 'home/vehiclebooking.html')

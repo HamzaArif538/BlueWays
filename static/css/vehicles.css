@@ -115,6 +115,19 @@
     margin-bottom: 5px;
 }
 
+.vehicles-name a{
+    color:black;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 5px;
+    transition: 0.4s;
+}
+
+.vehicles-name a:hover{
+    color: #FEC260;
+}
+
 
 .vehicles-info .vehicles-price{
     display: flex;

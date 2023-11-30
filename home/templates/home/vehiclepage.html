@@ -37,12 +37,12 @@
             {% for i in cars %}
             <div class="vehicles-container">
                 <div class="vehicles-picture">
-                    <img class='vehicles-img' src="{{i.picture.url}}" alt="">
+                    <a href="{% url "car_detail" pk_test=i.id  %}"><img class='vehicles-img' src="{{i.picture.url}}" alt=""></a>
                 </div>
 
                 <div class="vehicles-info">
                     <div class="vehicles-name">
-                        {{i.manufacturer}} {{i.name}} {{i.car_model}}
+                        <a href="{% url "car_detail" pk_test=i.id  %}">{{i.manufacturer}} {{i.name}} {{i.car_model}}</a>
                     </div>
                     <div class="vehicles-price">
                         <p class="vehicle-rs"> Rs </p> <p class="price">{{i.price}}</p >  <p class='vehicles-perday'>/perday</p>

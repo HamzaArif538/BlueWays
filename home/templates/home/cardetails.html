@@ -1,0 +1,67 @@
+{% extends "home/main.html" %}
+{% load static %}
+{% block content %}
+
+<link rel="stylesheet" href="{% static "/css/cardetails.css" %}">
+
+<div class="cardetailcontainer">
+    <div class="cardetailcont">
+        <div class="cardetailtitle">
+            BOOK YOUR {{car.manufacturer}} {{car.name}} NOW
+        </div>
+        <div class="cardetailinfo">
+            <div class="carinfoleft">
+                <div class="infolefttittle">
+                    {{car.manufacturer}} {{car.name}}
+                </div>
+                <div class="infoleftpic">
+                    <img src="{{car.picture.url}}" alt="">
+                </div>
+                <div class="infoleftprice">
+                    <span class="infoprice">{{car.price}}</span>
+                    <span class="infoperday">/perday</span>
+                </div>
+            </div>
+            <div class="carinforight">
+                <div class="inforighttitle">
+                    Vehicle Detail
+                </div>
+                <div class="inforighttable">
+                    <table class="infotable" border=1>
+                        <tr>
+                            <td>Name</td>
+                            <td>{{car.name}}</td>
+                        </tr>
+                        <tr>
+                            <td>Manufacturer</td>
+                            <td>{{car.manufacturer}}</td>
+                        </tr>
+                        <tr>
+                            <td>Model Year</td>
+                            <td>{{car.car_model}}</td>
+                        </tr>
+                        <tr>
+                            <td>Transmission</td>
+                            <td>{{car.transmition}}</td>
+                        </tr>
+                        <tr>
+                            <td>Price in City</td>
+                            <td>Rs {{car.price}}</td>
+                        </tr>
+                        <tr>
+                            <td>Price out of City</td>
+                            <td>Rs {{car.outcityprice}}</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="inforightbooking">
+                    <a href="">Book Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock content %}
