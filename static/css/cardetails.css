@@ -146,4 +146,30 @@
 .inforightbooking a{
     color: #fff;
     text-decoration: none;
+    width: 100%;
+    text-align: center;
+    height: 100%;
+}
+
+@media only screen and (max-width: 767px) {
+    .cardetailcontainer .cardetailcont {
+    width: 90vw;
+    }
+
+    .cardetailinfo {
+    flex-direction: column;
+    width: 90vw;
+    }
+
+    .carinfoleft .infoleftpic {
+    width: 100%;
+    }
+
+    .carinforight {
+    width: 100%;
+    }
+
+    .inforighttable table {
+    font-size: 12px;
+    }
 }

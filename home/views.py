@@ -1,7 +1,9 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from .models import *
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+from datetime import date
+from datetime import datetime
 
 # Create your views here.
 
@@ -49,5 +51,24 @@ def carDetail(request, pk_test):
     return render(request, 'home/cardetails.html', context)
 
 def vehiclebooking(request):
+    caar = Car.objects.all()
+    if request.method == 'POST':
+        firstname = request.POST.get('firstname')
+        lastname = request.POST.get('lastname')
+        email = request.POST.get('email')
+        phone = request.POST.get('phone')
+        datefrom_str = request.POST.get('datefrom')
+        dateto_str = request.POST.get('dateto')
 
-    return render(request, 'home/vehiclebooking.html')
+        date_from = datetime.strptime(datefrom_str, '%d/%m/%Y').strftime('%Y-%m-%d')
+        date_to = datetime.strptime(dateto_str, '%d/%m/%Y').strftime('%Y-%m-%d')
+        car_type_name = request.POST.get('carType')
+        car_instance = Car.objects.get(name=car_type_name)
+        message = request.POST.get('message')
+        booking = Booking(firstname=firstname, lastname=lastname, email=email, phoneno=phone, date_from=date_from, date_to=date_to, car_type=car_instance, message=message )
+        booking.save()
+
+
+    context = {'caar':caar,}
+
+    return render(request, 'home/vehiclebooking.html', context)

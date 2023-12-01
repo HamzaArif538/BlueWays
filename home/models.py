@@ -31,4 +31,18 @@ class Car(models.Model):
 
     def __str__(self):
         return self.name
+    
+
+class Booking(models.Model):
+    firstname = models.CharField(max_length=200, null=True)
+    lastname = models.CharField(max_length=200, null=True)
+    email = models.EmailField(("Email"), max_length=254, null=True)
+    phoneno = models.CharField(max_length=13, null=True)
+    date_from = models.DateField(null=True)
+    date_to = models.DateField(null=True)
+    car_type = models.ForeignKey(Car, null=True, on_delete=models.SET_NULL)
+    message = models.TextField(null=True)
+
+    def __str__(self):
+        return self.firstname
 

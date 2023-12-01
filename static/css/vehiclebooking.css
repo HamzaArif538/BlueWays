@@ -1,0 +1,118 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.bookingcontainer{
+    background: linear-gradient(to bottom,rgb(255, 255, 255), rgb(228, 227, 227));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bookingcont{
+    border: 2px solid rgb(185, 185, 185) ;
+    width: 80vw;
+    margin: 100px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #fff;
+    padding-bottom: 50px;
+}
+
+.bookingcont .bookingconttitle{
+    background: rgb(36, 114, 216);
+    color: #fff;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 50px 0;
+    padding: 12px 0px;
+}
+
+.bookingcont .bookingcontform{
+    width: 60vw;
+    display: flex;
+}
+
+.bookingcontform form{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.bookingcontform form #id_firstname {
+    /* background-color: #232D3F; */
+}
+
+
+.bookingcontform form input{
+    width: 28vw;
+    padding: 10px 8px;
+    color: rgb(128, 128, 128);
+    border: 1px solid rgb(209, 208, 208);
+    margin:8px 0;
+    
+}
+
+.bookingcontform form .optionlabel{
+    font-weight: bold;
+}
+
+.bookingcontform form .optionselect{
+    position: relative;
+    right: 74%;
+    top: 13px;
+    border: 1px solid rgb(95, 95, 95);
+    margin: 8px 0;
+    padding: 6px 4px;
+    border-radius: 3px;
+    background: rgb(152 164 180);
+    color: #fff;
+
+}
+
+form .optionselect .optionoption{
+    padding: 3px 5px;
+    background-color: white;
+    color: black;
+    /* border-bottom: 1px dashed rgb(207, 207, 207); */
+}
+
+.bookingcontform form .formmsg {
+    height: 80px;
+    width: 60vw;
+    margin-top: 20px;
+    padding: 4px 5px;
+}
+
+.bookingcontform form .formsubmit{
+    width: 100%;
+    background:#fcc742 ;
+    color: #fff;
+    
+}
+
+.bookingcontform form .formsubmit:hover{
+    cursor: pointer;
+    background: #232D3F;
+}
+
+
+
+
+
+
+@media only screen and (max-width: 1024px) {
+    .bookingcontform form .optionselect{
+        right: 65%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .bookingcontform form .optionselect{
+        right: 0%;
+    }
+}
