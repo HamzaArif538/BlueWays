@@ -15,7 +15,6 @@
         <div class="bookingcontform">
             <form action="" method='POST'>
                 {% csrf_token %}
-                {% comment %} {{form}} {% endcomment %}
                 <input name='firstname' type="text" placeholder='First Name' required>
                 <input name='lastname' type="text" placeholder='Last Name' required>
                 <input name='email' type="text" placeholder='Your Email'>

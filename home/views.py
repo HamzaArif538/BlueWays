@@ -4,12 +4,33 @@ from .models import *
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from datetime import date
 from datetime import datetime
+from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 
+
+def loginpage(request):
+    if request.user.is_authenticated:
+        return redirect('admindashboard')
+    else:
+        if request.method == 'POST':
+            username = request.POST.get('username')
+            password = request.POST.get('password')
+
+            user = authenticate(request, username=username, password=password)
+            if user is not None:
+                login(request, user)
+                return redirect('admindashboard')
+
+        return render(request, 'home/login.html')
+
+def logoutpage(request):
+    logout(request)
+    return redirect('loginpage')
+
 def home(request):
     return render(request, 'home/home.html')
-
 
 def vehicles(request):
     cars = Car.objects.all()
@@ -72,3 +93,12 @@ def vehiclebooking(request):
     context = {'caar':caar,}
 
     return render(request, 'home/vehiclebooking.html', context)
+
+@login_required(login_url='loginpage')
+def adminDashboard(request):
+    bookings = Booking.objects.all()
+
+    context = {'bookings':bookings}
+    return render(request, 'home/admindashboard.html', context)
+
+

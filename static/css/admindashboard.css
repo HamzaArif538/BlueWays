@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.dashboardcontainer{
+    background: linear-gradient(to bottom,rgb(248, 248, 248), rgb(228, 227, 227));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dashboardcontainer .dashboardcont{
+    border: 2px solid rgb(185, 185, 185) ;
+    width: 80vw;
+    margin: 100px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #fff;
+    padding-bottom: 50px;
+}
+
+.dashboardcont .dashboardtitle{
+    width: 100%;
+    background-color: rgb(36, 114, 216);
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 30px;
+    margin-bottom: 20px;
+}
+
+.dashboardtitle #titleuser{
+    color: rgb(255, 227, 157);
+}
+
+.dashboardtitle #titleusername{
+    font-weight: bold;
+    font-size: large;
+}
+
+.dashboardtitle #titleuserout a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.dashboardcont .dashboardinfo{
+    border: 1px solid rgb(185, 185, 185) ;
+    display: flex;
+    width: 70vw;
+    margin: 10px 20px;
+    background: linear-gradient(to bottom,rgb(248, 248, 248), rgb(241, 241, 241));
+}
+
+.dashboardinfo  .infodashleft{
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px; 
+    width: 32vw;
+    border-right: 1px solid rgb(185, 185, 185);
+}       
+
+.infodashleft .leftcontainers{
+    margin: 15px 5px;
+    display: flex;
+}
+
+.leftcontainers .leftconthead{
+    margin: 0 5px 0 0;
+    font-weight: bold;
+}
+
+.leftcontainers .leftcontvalue{
+    font-weight: bold;
+    color: rgb(76, 174, 212);
+}
+
+.dashboardinfo .infodashright{
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px; 
+    width: 32vw;
+    border-left: 1px solid rgb(185, 185, 185);
+}
+
+.infodashright .clientname{
+    margin: 15px 5px;
+    display: flex;
+}
+.clientname .client-name{
+    margin: 0 5px 0 0;
+    font-weight: bold;
+}
+.clientname .rightname{
+    font-weight: bold;
+    color: rgb(76, 174, 212);
+}
+
+.infodashright .clientmessage{
+    margin: 15px 5px;
+}
+.clientmessage .client-message{
+    margin: 0 5px 0 0;
+    font-weight: bold;
+}
+.clientmessage .rightmessage{
+    border: 1px solid black;
+    height: 120px;
+    margin-top: 10px;
+    padding: 10px 10px;
+    overflow: auto;
+    background: #fff;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .dashboardcontainer .dashboardcont {
+        width: 90vw;
+    }
+
+    .dashboardcont .dashboardinfo {
+        flex-direction: column;
+        width: 90vw;
+    }
+
+    .dashboardinfo .infodashleft,
+    .dashboardinfo .infodashright {
+        width: 90vw;
+        border: none;
+    }
+
+    .infodashleft .leftcontainers,
+    .infodashright .clientname,
+    .clientmessage .client-message,
+    .clientmessage .rightmessage {
+        width: 100%;
+    }
+
+    .clientmessage .rightmessage{
+        border: 1px solid black;
+        height: 120px;
+        margin-top: 10px;
+        padding: 10px 10px;
+        overflow: auto;
+        background: #fff;
+        width: 310px;
+    }
+}
+
+@media only screen and (max-width: 280px) and (min-height: 570px) {
+    .dashboardcontainer .dashboardcont {
+        width: 90vw;
+    }
+
+    .dashboardcont .dashboardinfo {
+        flex-direction: column;
+        width: 90vw;
+    }
+
+    .dashboardinfo .infodashleft,
+    .dashboardinfo .infodashright {
+        width: 90vw;
+        border: none;
+    }
+
+    .infodashleft .leftcontainers,
+    .infodashright .clientname,
+    .clientmessage .client-message,
+    .clientmessage .rightmessage {
+        width: 100%;
+    }
+
+    .clientmessage .rightmessage{
+        border: 1px solid black;
+        height: 120px;
+        margin-top: 10px;
+        padding: 10px 10px;
+        overflow: auto;
+        background: #fff;
+        width: 180px;
+    }
+}

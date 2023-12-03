@@ -33,5 +33,17 @@
                 </li>
             </ul>
         </div>
+        <div class="navbar-toggle">
+            <button id="navbar-toggle-button">&#9776;</button>
+        </div>
     </div>
 </nav>
+
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $("#navbar-toggle-button").click(function () {
+            $(".navbar-nav_items ul").toggleClass("show");
+        });
+    });
+</script>

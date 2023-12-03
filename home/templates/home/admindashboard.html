@@ -1,0 +1,62 @@
+{% extends "home/main.html" %}
+{% load static %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static "/css/admindashboard.css" %}">
+
+
+
+
+<div class="dashboardcontainer">
+    
+    <div class="dashboardcont">
+        <div class="dashboardtitle">
+            <span id='titleuser' >Hello, <span id='titleusername'>{{request.user}}</span> </span>
+            <span>Your Booking Requests </span>
+            <span id='titleuserout'><a  href="{% url "logoutpage" %}">Logout</a></span>
+        </div>
+        {% for i in bookings %}
+        <div class="dashboardinfo">
+            <div class="infodashleft">
+                <div class="leftcontainers namecar">
+                    <p class="leftconthead car-model">Vehicle Model:</p>
+                    <p class="leftcontvalue carname">{{i.car_type}}</p>
+                </div>
+                <div class="leftcontainers from_date">
+                    <p class="leftconthead pick-date">Pick Up Date:</p>
+                    <p class="leftcontvalue date_from">{{i.date_from}} </p>
+                </div>
+                <div class="leftcontainers to_date">
+                    <p class="leftconthead drop-date">Drop Off Date:</p>
+                    <p class="leftcontvalue date_to">{{i.date_to}} </p>
+                </div>
+                
+                <div class="leftcontainers clientphone">
+                    <p class="leftconthead client-phone">Client Phone no:</p>
+                    <p class="leftcontvalue phone">{{i.phoneno}} </p>
+                </div>
+                <div class="leftcontainers clientemail">
+                    <p class="leftconthead client-email">Client Email:</p>
+                    <p class="leftcontvalue email">{{i.email}} </p>
+                </div>
+            </div>
+            <div class="infodashright">
+                <div class="clientname">
+                    <p class="client-name">Client Name</p>
+                    <p class="rightname">{{i.firstname}} {{i.lastname}} </p>
+                </div>
+                <div class="clientmessage">
+                    <p class="client-message">Client Message</p>
+                    <p class="rightmessage">{{i.message}} </p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+
+
+
+
+{% endblock content %}

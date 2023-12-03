@@ -30,7 +30,7 @@ class Car(models.Model):
     category = models.CharField(max_length=200, null=True, choices=CATEGORY)
 
     def __str__(self):
-        return self.name
+        return f"{self.manufacturer} {self.name}"
     
 
 class Booking(models.Model):
@@ -44,5 +44,5 @@ class Booking(models.Model):
     message = models.TextField(null=True)
 
     def __str__(self):
-        return self.firstname
+        return f"{self.firstname} {self.lastname}"
 
