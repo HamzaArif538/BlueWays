@@ -15,6 +15,11 @@
             <div class="vehiclepage-result">
                 <p>Showing {{cars|length}} results</p>
             </div>
+            <div class="vehiclepage-filter">
+                <form id='filterForm' method='get'>
+                    {{myFilter.form}}
+                </form>
+            </div>
             <div class="vehiclepage-topright">
                 <span class="current">
                     Page {{cars.number}} of {{cars.paginator.num_pages}}
@@ -91,3 +96,29 @@
     </div>
 </div>
 <script src="{% static "/js/vehiclepage.js" %}"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function(){
+        var filterForm = document.getElementById('filterForm');
+    
+        filterForm.addEventListener('change', function(){
+            var formData = new FormData(filterForm);
+            var queryString = serializeFormData(formData);
+    
+            window.location.href = updateQueryString(window.location.href, queryString);
+        });
+    
+        function updateQueryString(uri, queryString) {
+            var separator = uri.indexOf('?') !== -1 ? "&" : "?";
+            return uri + separator + queryString;
+        }
+    
+        function serializeFormData(formData) {
+            var serialized = [];
+            formData.forEach(function(value, key){
+                serialized.push(encodeURIComponent(key) + "=" + encodeURIComponent(value));
+            });
+            return serialized.join("&");
+        }
+    });
+    
+</script>

@@ -6,6 +6,7 @@ from datetime import date
 from datetime import datetime
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
+from .filters import CarFilter
 
 # Create your views here.
 
@@ -35,6 +36,8 @@ def home(request):
 def vehicles(request):
     cars = Car.objects.all()
     total_cars = cars.count()
+    myFilter = CarFilter(request.GET, queryset=cars)
+    cars = myFilter.qs
 
     sort_option  = request.GET.get('sort', None)
 
@@ -58,13 +61,15 @@ def vehicles(request):
     except EmptyPage:
         cars = paginator.page(paginator.num_pages)
 
+    
+    
 
-    context = {'cars':cars, 'total_cars':total_cars}
+    context = {'cars':cars, 'total_cars':total_cars, 'myFilter':myFilter}
     return render(request, 'home/vehicles.html', context)
 
 
-def categories(request):
-    return render(request, 'home/categories.html')
+def services(request):
+    return render(request, 'home/services.html')
 
 def carDetail(request, pk_test):
     car = Car.objects.get(id=pk_test)

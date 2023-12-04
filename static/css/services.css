@@ -1,0 +1,72 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.servicescontainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background: linear-gradient(to bottom,rgb(255, 255, 255), rgb(228, 227, 227));
+    padding: 20px 0 0 0;
+}
+
+.servicescontainer .serviceshead{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 40px 0;
+}
+
+.serviceshead .servicesheadtitle h1{
+    font-size: 50px;
+    margin: 20px 0;
+}
+
+.serviceshead .servicesheadinfo{
+    color: rgb(76, 174, 212);
+    font-weight: bold;
+    letter-spacing: 0.25cap;
+    margin-bottom: 20px;
+}
+
+.servicescontainer .servicesmain{
+    background:black;
+    color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 20px 0;
+}
+
+.servicesmain .servicesmaincont{
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    height: 320px;
+    background: black;
+    margin: 20px 0px ;
+    align-items: center;
+    border-radius: 40px;
+    flex-wrap: wrap;
+    padding: 20px 20px 0 20px;
+    transition: 0.5s;
+}
+
+.servicesmain .servicesmaincont:hover{
+    background: rgb(76, 174, 212);
+    /* box-shadow: 1px 1px 20px 2px white; */
+}
+
+.servicesmaincont .mainconttitle{
+    padding: 20px 0;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.servicesmaincont .maincontinfo{
+    margin: 20px 20px;
+
+}

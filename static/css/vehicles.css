@@ -33,23 +33,30 @@
     margin-right: 30px;
     font-family: 'Calibri';
     padding: 10px 40px;
+    align-items: end;
 }
 
 
-.vehiclepage-maincont .vehiclepage-extra .vehiclepage-result{
-    font-size: 17px;
-    position: relative;
-    top: 50px;
-}
 .vehiclepage-maincont .vehiclepage-extra .vehiclepage-result p{
-    /* font-family: 'Open Sans', sans-serif; */
     font-family: 'Inconsolata', monospace;
     
 }
 
+.vehiclepage-extra .vehiclepage-filter{
+    background-color: rgb(228, 227, 227);
+    padding: 5px 5px;
+    border: 1px solid rgb(199, 198, 198);
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.vehiclepage-filter form select{
+    border: none;
+    background-color: rgb(228, 227, 227);
+    cursor: pointer;
+}
+
 .vehiclepage-extra .vehiclepage-topright .current{
-    /* background-color: blue; */
-    /* font-family: 'Open Sans', sans-serif; */
     font-family: 'Inconsolata', monospace;
 }
 
@@ -164,7 +171,7 @@
     background:#fff;
     font-size: 20px;
     padding: 7px 11px;
-    height: 20px;
+    /* height: 20px; */
     margin: 10px 10px;
     border-radius: 4px;
     cursor: pointer;
@@ -185,5 +192,6 @@
 
 .vehiclepage-bigcont .pagination{
     background:rgb(228, 227, 227) ;
+    margin-bottom: 20px;
     
 }
