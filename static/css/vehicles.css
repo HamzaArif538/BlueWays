@@ -4,6 +4,7 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 .vehiclepage-bigcont{
@@ -194,4 +195,74 @@
     background:rgb(228, 227, 227) ;
     margin-bottom: 20px;
     
+}
+
+
+
+@media only screen and (max-width: 768px) {
+    .vehiclepage-maincont .vehiclepage-heading {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .vehiclepage-maincont .vehiclepage-extra {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    .vehiclepage-extra .vehiclepage-topright{
+        margin-top: 20px;
+        margin-bottom: -10px;
+    }
+
+    .vehiclepage-extra .vehiclepage-filter form select,
+    .vehiclepage-sort #vehicle-sort-dropdown {
+        width: 100%;
+    }
+
+    .vehiclepage-container {
+        padding: 10px 10px;
+    }
+
+    .vehicles-container {
+        width: 100%;
+        margin: 20px 0;
+    }
+
+    .vehicles-container .vehicles-picture {
+        height: 200px;
+    }
+
+    .vehicles-container .vehicles-info {
+        margin: 20px 10px;
+    }
+
+    .vehicles-info .vehicles-name {
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .vehicles-info .vehicles-price {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .vehicles-info .vehicles-price .vehicle-rs,
+    .vehicles-info .vehicles-price .price,
+    .vehicles-info .vehicles-price .vehicles-perday {
+        text-align: center;
+    }
+
+    .pagination {
+        text-align: center;
+    }
+
+    .pagination .step-links {
+        justify-content: center;
+    }
+
+    .pagination .step-links .vehiclepagination {
+        margin: 10px 5px;
+    }
 }

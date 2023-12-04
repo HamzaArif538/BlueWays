@@ -99,6 +99,7 @@ def vehiclebooking(request):
 
     return render(request, 'home/vehiclebooking.html', context)
 
+
 @login_required(login_url='loginpage')
 def adminDashboard(request):
     bookings = Booking.objects.all()
@@ -106,4 +107,6 @@ def adminDashboard(request):
     context = {'bookings':bookings}
     return render(request, 'home/admindashboard.html', context)
 
+def aboutus(request):
 
+    return render(request, 'home/aboutus.html')

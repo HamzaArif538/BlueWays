@@ -1,0 +1,32 @@
+{% extends "home/main.html" %} 
+{% load static %} 
+{% block content %}
+
+<link rel="stylesheet" href="{% static '/css/aboutus.css' %}" />
+
+<div class="aboutcontainer">
+    <div class="aboutcont">
+        <div class="aboutcontleft">
+            <div class="aboutlefttitle">
+                About BlueWays Car Hire
+            </div>
+            <div class="aboutleftinfo">
+                Set out on an efficient and hassle-free rental car journey with
+                BlueWays, the reliable car rental company in Mirpur since 2020. Serving
+                Mirpur and surrounding districts, we prioritize your travel needs.
+                Benefit from market-competitive rates without compromising on quality
+                service. Planning a wedding? Enjoy exclusive discounts to make your
+                special day even more extraordinary. Choose to extend your bookings to
+                receive discounted prices for longer trips.Our commitment to exceptional
+                customer service ensures that every ride with us is a seamless and
+                enjoyable experience in Azad Kashmir. Choose BlueWays for reliability,
+                affordability, and genuine hospitality.
+            </div>
+        </div>
+        <div class="aboutcontright">
+            <img src="{% static '/images/prado2018.png' %}" alt=""> 
+        </div>
+    </div>
+</div>
+
+{% endblock content %}
