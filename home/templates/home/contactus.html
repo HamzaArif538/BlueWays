@@ -1,0 +1,38 @@
+{% extends "home/main.html" %}
+{% load static %}
+
+{% block content %}
+
+    <div class="contactcontainer">
+        <div class="contactcont">
+            <div class="contactconthead">
+                <div class="contactheadtitle">
+                    Contact Us
+                </div>
+                <div class="contactheadinfo">
+                    Fill Up The Form And Our Team Will Get In Touch With You Soon
+                </div>
+            </div>
+            <div class="contactcontbody">
+                <div class="contactbodyleft">
+                    <div class="contactlefthead">
+                        Please Fill The Form
+                    </div>
+                </div>
+                <div class="contactbodyright">
+                    <form action="" method='POST'>
+                        {% csrf_token %}
+                        <input name='name' type="text" placeholder='Your Name'>
+                        <input name='phone' type="phone" placeholder='Your Phone no'>
+                        <input name='email' type="email" placeholder='Your email'>
+                        <textarea name="message" id="" cols="30" rows="10"></textarea>
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+{% endblock content %}

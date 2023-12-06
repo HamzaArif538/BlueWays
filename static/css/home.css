@@ -3,6 +3,14 @@
     padding: 0;
 }
 
+.homecontainer{
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(to bottom,rgb(255, 255, 255), rgb(228, 227, 227));
+    width: 100%;
+    align-items: center;
+}
+
 .home-slider-container{
     width: 100%;
     overflow: hidden;

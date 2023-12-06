@@ -1,0 +1,49 @@
+{% load static %}
+<link rel="stylesheet" href="{% static "css/homebooking.css" %}">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+<div class="h-bookingcontainer">
+    <div class="h-bookingtitle">
+        <h2>Book Your Vehicle Now</h2>
+    </div>
+    <div class="h-bookingform">
+        <form action="" method='POST'>
+            {% csrf_token %}
+            <input class='h-forminput h-shortinput' name='firstname' type="text" placeholder='First Name' required>
+            <input class='h-forminput h-shortinput' name='lastname' type="text" placeholder='Last Name' required>
+            <input class='h-forminput' name='email' type="text" placeholder='Your Email'>
+            <input class='h-forminput h-shortinput' name='phone' type="text" placeholder='Phone/Mobile Number' required>
+            <input class='h-forminput h-shortinput' name='datefrom' type="text" placeholder='From ' id="dateFromInput" required>
+            <input class='h-forminput h-shortinput' name='dateto' type="text" placeholder='To ' id="dateToInput" required>
+            
+            <select class='h-forminput h-shortinput optionselect' name="carType" id="carType"     >
+                {% for i in caar %}
+                    <option class='optionoption' value="{{i.name}}">{{i.manufacturer}} {{i.name}}</option>
+                {% endfor %}
+            </select>
+            {% comment %} <textarea class='h-forminput formmsg' name='message' type="text" placeholder='If you want more than one cars for any special event then tell us'></textarea> {% endcomment %}
+            <input class='formsubmit' type="submit" value='submit'>
+        </form>
+    </div>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        flatpickr("#dateFromInput", {
+        enableTime: false,
+        dateFormat: "d/m/Y",
+        placeholder: "From ",
+        minDate: "today",
+        });
+    
+        flatpickr("#dateToInput", {
+        enableTime: false,
+        dateFormat: "d/m/Y",
+        placeholder: "To ",
+        minDate: "today",
+        });
+    });
+</script>
+

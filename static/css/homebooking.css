@@ -1,0 +1,78 @@
+.h-bookingcontainer{
+    display: flex;
+    flex-direction: column;
+    margin: 40px 20px;
+    align-items: center;
+}
+
+
+.h-bookingcontainer .h-bookingtitle{
+    margin: 0 0 40px 0;
+}
+
+.h-bookingcontainer .h-bookingtitle h2{
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.h-bookingcontainer .h-bookingform{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    background: #17507E;
+    padding: 40px 20px 40px 20px;
+    margin: 0px 60px;
+}
+
+.h-bookingcontainer .h-bookingform form{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    width: 100%;
+}
+
+
+.h-bookingform form .h-forminput{
+    margin: 20px 8px;
+    width: 360px;
+    height: 40px;
+    padding: 7px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(240, 240, 240);
+    
+}
+
+.h-bookingform form .h-shortinput{
+    width: 240px;
+}
+
+/* form .formmsg{
+    min-height: 120px;
+} */
+
+form .formsubmit{
+    color: #fff;
+    background: #232D3F;
+    margin: 20px 8px;
+    width: 360px;
+    height: 40px;
+    padding: 7px;
+    border-radius: 5px;
+    border: none;
+    border: 1px solid rgb(76, 174, 212);
+    cursor: pointer;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .h-bookingform form .h-forminput{
+        width: 240px;
+    }
+    
+    form .formsubmit{
+        width: 240px;
+        
+    }
+}
