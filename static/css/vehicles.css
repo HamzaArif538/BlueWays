@@ -12,6 +12,7 @@
     flex-direction: column;
     align-items: center;
     background: linear-gradient(to bottom,rgb(255, 255, 255), rgb(228, 227, 227));
+    margin-top: 50px;
 }
 
 .vehiclepage-maincont{

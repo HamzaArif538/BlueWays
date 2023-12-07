@@ -21,12 +21,8 @@
                 <input name='phone' type="text" placeholder='Phone/Mobile Number' required>
                 <input name='datefrom' type="text" placeholder='From ' id="dateFromInput" required>
                 <input name='dateto' type="text" placeholder='To ' id="dateToInput" required>
-                <label class='optionlabel' for="carType"> Choose your cars</label>
-                <select class='optionselect' name="carType" id="carType"     >
-                    {% for i in caar %}
-                        <option class='optionoption' value="{{i.name}}">{{i.manufacturer}} {{i.name}}</option>
-                    {% endfor %}
-                </select>
+                <input name='carname' type="text" placeholder='Car Name' value="{{ caar.name }}" readonly required>
+                <input type="hidden" name="carType" value="{{ caar.name }}">
                 <textarea class='formmsg' name='message' type="text" placeholder='If you want more than one cars for any special event then tell us'></textarea>
                 <input class='formsubmit' type="submit" value='submit'>
             </form>

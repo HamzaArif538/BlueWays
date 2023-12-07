@@ -54,8 +54,9 @@
                         </tr>
                     </table>
                 </div>
+                
                 <div class="inforightbooking">
-                    <a href="{% url "vehiclebooking"  %}">Book Now</a>
+                    <a href="{% url "vehiclebooking" pk_book=car.id|stringformat:'s' %}">Book Now</a>
                 </div>
             </div>
         </div>

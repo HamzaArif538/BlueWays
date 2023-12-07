@@ -10,6 +10,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 50px;
 }
 
 .dashboardcontainer .dashboardcont{
@@ -21,8 +22,8 @@
     align-items: center;
     background: #fff;
     padding-bottom: 50px;
-    max-height: 150vh;
-    overflow-y: auto;
+    /* max-height: 150vh;
+    overflow-y: auto; */
 }
 
 .dashboardcont .dashboardtitle{

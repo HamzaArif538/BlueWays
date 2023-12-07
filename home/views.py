@@ -96,11 +96,13 @@ def services(request):
 
 def carDetail(request, pk_test):
     car = Car.objects.get(id=pk_test)
-    context = {'car':car}
+    
+    context = {'car':car,}
     return render(request, 'home/cardetails.html', context)
 
-def vehiclebooking(request):
-    caar = Car.objects.all()
+def vehiclebooking(request, pk_book):
+    caar = Car.objects.get(id=pk_book)
+    cars = Car.objects.all()
     if request.method == 'POST':
         firstname = request.POST.get('firstname')
         lastname = request.POST.get('lastname')
@@ -118,14 +120,14 @@ def vehiclebooking(request):
         booking.save()
 
 
-    context = {'caar':caar,}
+    context = {'caar':caar, 'cars': cars}
 
     return render(request, 'home/vehiclebooking.html', context)
 
 
 @login_required(login_url='loginpage')
 def adminDashboard(request):
-    bookings = Booking.objects.all()
+    bookings = Booking.objects.all().order_by('-date_created')
 
     context = {'bookings':bookings}
     return render(request, 'home/admindashboard.html', context)
