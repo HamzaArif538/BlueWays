@@ -11,6 +11,7 @@ urlpatterns = [
     path('car_detail/<str:pk_test>/', views.carDetail, name='car_detail'),
     path('vehiclebooking/<str:pk_book>/', views.vehiclebooking, name='vehiclebooking'),
     path('admindashboard', views.adminDashboard, name='admindashboard'),
+    path('contactdashboard', views.contactDashboard, name='contactdashboard'),
 
     path('services', views.services, name='services'),
     path('aboutus', views.aboutus, name='aboutus'),

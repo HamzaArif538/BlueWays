@@ -132,17 +132,26 @@ def adminDashboard(request):
     context = {'bookings':bookings}
     return render(request, 'home/admindashboard.html', context)
 
+
+@login_required(login_url='loginpage')
+def contactDashboard(request):
+    contacts = Contact.objects.all().order_by('-date_created')
+    context = {'contacts':contacts}
+    return render(request, 'home/contactdashboard.html',context)
+
+
 def aboutus(request):
 
     return render(request, 'home/aboutus.html')
 
 def contactus(request):
-    if request.method == "POST":
-        form = ContactForm(request.POST)
-        if form.is_valid():
-            return redirect('contactus')
-    else:
-        form = ContactForm()
+    if request.method == 'POST':
+        name = request.POST.get('name')
+        phone = request.POST.get('phone')
+        email = request.POST.get('email')
+        message = request.POST.get('message')
+        contact = Contact(name=name, phone=phone, email=email, message=message)
+        contact.save()
 
-    context = {'form':form}
+    context = {}
     return render(request, 'home/contactus.html', context)

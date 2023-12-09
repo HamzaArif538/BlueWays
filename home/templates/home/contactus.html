@@ -2,6 +2,9 @@
 {% load static %}
 
 {% block content %}
+<link rel="stylesheet" href="{% static "/css/contactus.css" %}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 
     <div class="contactcontainer">
         <div class="contactcont">
@@ -18,16 +21,42 @@
                     <div class="contactlefthead">
                         Please Fill The Form
                     </div>
+                    <div class="contactleftform">
+                        <form action="" method='POST'>
+                            {% csrf_token %}
+                            <div class=" contactformfirst">
+                                <input class='contactformitem firstrow' name='name' type="text" placeholder='Your Name'>
+                                <input class='contactformitem firstrow' name='phone' type="phone" placeholder='Your Phone no'>
+                            </div>
+                            <input class='contactformitem' name='email' type="email" placeholder='Your email'>
+                            <textarea class='contactformitem' placeholder='Write Your Message' name="message" id="" cols="30" rows="10"></textarea>
+                            <button class='contactformitem' type="submit">Submit</button>
+                        </form>
+                    </div>
                 </div>
                 <div class="contactbodyright">
-                    <form action="" method='POST'>
-                        {% csrf_token %}
-                        <input name='name' type="text" placeholder='Your Name'>
-                        <input name='phone' type="phone" placeholder='Your Phone no'>
-                        <input name='email' type="email" placeholder='Your email'>
-                        <textarea name="message" id="" cols="30" rows="10"></textarea>
-                        <button type="submit">Submit</button>
-                    </form>
+                    <div class="contactright">
+                        <div class="contactrighticon">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <div class="contactrighthead">
+                            Send Us Email
+                        </div>
+                        <div class="contactrightinfo">
+                            <a target='blank' href="mailto:harisraja4545@gmail.com">harisraja4545@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="contactright">
+                        <div class="contactrighticon">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                        <div class="contactrighthead">
+                            Call Us
+                        </div>
+                        <div class="contactrightinfo">
+                            <a href="tel:+923414377703">+92 341 4377703</a> 
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

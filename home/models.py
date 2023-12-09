@@ -47,3 +47,13 @@ class Booking(models.Model):
     def __str__(self):
         return f"{self.firstname} {self.lastname}"
 
+
+class Contact(models.Model):
+    name = models.CharField(max_length=100, null=True)
+    phone = models.CharField(max_length=13, null=True)
+    email = models.EmailField(("Email"), max_length=254, null=True)
+    message = models.TextField(null=True)
+    date_created = models.DateTimeField(auto_now_add=True, null=True)
+
+    def __str__(self):
+        return self.name
