@@ -14,11 +14,11 @@
             <span id='titleuser' >Hello, <span id='titleusername'>{{request.user}}</span> </span>
             <span>Your <b>Booking</b> Requests </span>
             <span id='titleuserout'>
-                <a  href="{% url "logoutpage" %}">
-                    Logout
-                </a>/ 
                 <a href="{% url "contactdashboard" %}">
                     Contact Requests
+                </a>/
+                <a  href="{% url "logoutpage" %}">
+                    Logout
                 </a>
             </span>
         </div>

@@ -102,6 +102,7 @@ form .contactformfirst .firstrow{
 .contactleftform form button:hover{
     background: #232D3F;
     color: #fff;
+    cursor: pointer;
 }
 
 

@@ -6,7 +6,8 @@
 .navbar-container{
     display: flex;
     justify-content: space-evenly;
-    background: linear-gradient(to top,rgb(248, 248, 248), rgb(228, 227, 227));
+    /* background: linear-gradient(to top,rgb(248, 248, 248), rgb(124, 124, 124)); */
+    background-color: rgba(0, 0, 0, 0.8);
     /* margin: 0 0 20px 0; */
     padding: 20px 0 20px 0;
     align-items: center;
@@ -20,14 +21,21 @@
 }
 
 .navbar-nav_logo{
-    font-size: 30px;
-    font-weight: bold;
+    height: 50px;
+    overflow: hidden;
+    /* background: blue; */
+}
+
+.navbar-nav_logo img{
+    height: 55px;
+    padding-bottom: 5px;
 }
 
 .navbar-nav_items ul{
     display: flex;
     justify-content: space-evenly;
     width: 680px;
+    
 }
 
 .navbar-nav_items ul li{
@@ -40,6 +48,7 @@
     text-decoration: none;
     color: black;
     transition: 0.navbar-5s;
+    color: #fff;
 }
 
 .mobile-menu-btn{
@@ -56,6 +65,9 @@
 .navbar-nav_items ul li a:hover{
     color: rgb(0, 153, 255);
     
+}
+.navbar-nav_items ul li.active a{
+    color: rgb(0, 153, 255);
 }
 
 .navbar-toggle{

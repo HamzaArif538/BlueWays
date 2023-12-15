@@ -10,7 +10,8 @@
     /* align-items: center; */
     height: auto;
     padding:20px 0 20px 60px;
-    background: linear-gradient(to top, rgb(0, 0, 0),rgb(20, 20, 20));
+    /* background: linear-gradient(to top, #003d58,#016b9c); */
+    background: #0d506e;
     color: #fff;
 
 }
@@ -92,6 +93,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: 0.4s;
 }
 
 #social li a i{

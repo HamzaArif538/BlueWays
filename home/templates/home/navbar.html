@@ -6,23 +6,25 @@
 <nav>
     <div class="navbar-container">
         <div class='navbar-nav_logo'>
-            Logo
+            <a href="/">
+                <img src="{% static "/images/blueways.png" %}" alt="">
+            </a>
         </div>
         <div class='navbar-nav_items'>
             <ul class='navbar-list_items'>
-                <li class='navbar-item'>
+                <li class="navbar-item {% if request.path == '/' %}active{% endif %}">
                     <a href="/">Home</a>
                 </li>
-                <li class='navbar-item'>
+                <li class="navbar-item {% if request.path == '/vehicles' %}active{% endif %}">
                     <a href="{% url "vehicles" %}">Vehicles</a>
                 </li>
-                <li class='navbar-item'>
+                <li class="navbar-item {% if request.path == '/services' %}active{% endif %}">
                     <a href="{% url "services" %}">Services</a>
                 </li>
-                <li class='navbar-item'>
+                <li class="navbar-item {% if request.path == '/aboutus' %}active{% endif %}">
                     <a href="{% url "aboutus" %}">About Us</a>
                 </li>
-                <li class='navbar-item'>
+                <li class="navbar-item {% if request.path == '/contactus' %}active{% endif %}">
                     <a href="{% url "contactus" %}">Contact Us</a>
                 </li>
             </ul>
@@ -36,8 +38,14 @@
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 <script>
     $(document).ready(function () {
+        $(".navbar-nav_items ul li a").click(function () {
+            $(".navbar-nav_items ul li").removeClass("active");
+            $(this).parent().addClass("active");
+        });
+    
         $("#navbar-toggle-button").click(function () {
             $(".navbar-nav_items ul").toggleClass("show");
         });
     });
+    
 </script>

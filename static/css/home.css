@@ -57,6 +57,24 @@
     width: 100%;
 }
 
+.homecontainer .homemap{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid black;
+    object-fit: contain;
+    border-radius: 10px;
+    box-shadow: 5px 5px 20px 1px black;
+    width: 85vw;
+    margin-bottom: 50px;
+    margin-top: 30px;
+}
+
+.homemap .home-map{
+    border-radius: 10px;
+    width: 85vw;
+}
+
 @media (max-width: 768px) {
     .home-slide {
         min-width: 100%;

@@ -11,12 +11,15 @@
     flex-direction: column;
     width: 100%;
     background: linear-gradient(to bottom,rgb(255, 255, 255), rgb(228, 227, 227));
-    margin-top: 50px;
+    margin: 50px 0px 0 0;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 50px;
 }
 
 .aboutcontainer .aboutcont{
     display: flex;
-    margin: 50px 50px;
+    margin: 50px 50px 0 50px;
     justify-content: center;
 }
 
@@ -52,6 +55,22 @@
 
 .aboutcontright img{
     width: 520px;
+}
+
+.aboutcontainer .aboutmap{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid black;
+    object-fit: contain;
+    border-radius: 10px;
+    box-shadow: 5px 5px 20px 1px black;
+    width: 85vw;
+}
+
+.aboutmap .about-map{
+    border-radius: 10px;
+    width: 85vw;
 }
 
 

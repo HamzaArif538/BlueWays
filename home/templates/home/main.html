@@ -5,12 +5,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BlueWays</title>
-    
+    <title>{% block title %}BlueWays{% endblock title %}  </title>
+    <link rel="icon" type="image/x-icon" href="{% static "/images/favicon.ico" %}">
+    <link rel="stylesheet" href="{% static "/css/main.css" %}">
 </head>
 <body>
     {% include "home/navbar.html" %}
-
+    <div class="whatsappimg">
+        <a href="https://wa.me/923485310150" target='_blank'>
+            <img class='whatsimg' src="{% static "/images/whatsapp.png" %}" alt="">
+        </a>
+    </div>
     {% block content %}
     
     

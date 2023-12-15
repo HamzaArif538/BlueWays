@@ -1,5 +1,6 @@
 {% extends "home/main.html" %}
 {% load static %}
+{% block title %} {{car.manufacturer}} {{car.name}} {{car.car_model}} - Blueways {% endblock title %}
 {% block content %}
 
 <link rel="stylesheet" href="{% static "/css/cardetails.css" %}">
