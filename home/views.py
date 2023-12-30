@@ -97,7 +97,7 @@ def services(request):
 def carDetail(request, pk_test):
     car = Car.objects.get(id=pk_test)
     
-    context = {'car':car,}
+    context = {'car':car}
     return render(request, 'home/cardetails.html', context)
 
 def vehiclebooking(request, pk_book):

@@ -1,3 +1,4 @@
+
 *{
     margin: 0;
     padding: 0;
@@ -47,7 +48,7 @@
 .navbar-nav_items ul li a{
     text-decoration: none;
     color: black;
-    transition: 0.navbar-5s;
+    transition: 0.5s;
     color: #fff;
 }
 
@@ -74,8 +75,19 @@
     display: none;
 }
 
+.navbar-toggle #navbar-toggle-button{
+    background-color: rgba(0, 0, 0, 0.1);
+    color: #fff;
+    padding: 5px;
+}
+
 
 @media only screen and (max-width: 768px) {
+
+    .navbar-nav_items ul{
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+
     .navbar-nav_items ul {
         display: none;
         flex-direction: column;
@@ -89,10 +101,12 @@
         z-index: 1;
         width: 150px;
         height: 100%;
+        
     }
     
     .navbar-toggle{
         display: block;
+        
     }
 
     .navbar-nav_items ul li{
